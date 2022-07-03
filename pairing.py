@@ -24,16 +24,36 @@ class player():
         self.lichess_username
 
     @property
-    def affiliation(self):
-    	return self._affiliation
+    def history(self):
+    	return self._history
 
     @affiliation.setter 
-    def affiliation(self, value):
-    	self._affiliation = value
+    def history(self, value):
+    	self._history = value
 
 ###
 
 # pairing mechanism 
+
+## essential rules:
+# 1. No rematches
+# 2. No repeat byes for the same person
+# 3. Non-top-scorers with same absolute colour preference can't match (why only non-top-scorers?)
+
+## process:
+# 1. Round one: Inputs: sorted players:
+#		Separate players into two groups (G1, G2), with the bottom group containing any remainder
+# 		If there is a remainder, the last player in G2 receives a one-point bye
+#		Match #1 of G1 with #1 of G2, etc (i.e. #1 with #(N//2)+1)
+#		Allocate colours (randomly?)
+#			output: list of pairs of players and un-paired players (i.e. Bye)
+# 2. Other rounds: Sorted players with history:
+#		
+
+# 		
+
+
+
 
 
 ## colour preference function
