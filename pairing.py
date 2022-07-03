@@ -1,0 +1,1 @@
+# algorithm for organising chess tournament pairing
