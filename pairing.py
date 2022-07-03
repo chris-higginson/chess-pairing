@@ -1,4 +1,8 @@
 # algorithm for organising chess tournament pairing
+import re
+import numpy as np
+import pandas as pd
+
 
 class player():
     '''object to record information on each player, 
