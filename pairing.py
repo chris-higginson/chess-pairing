@@ -27,7 +27,7 @@ class player():
     def history(self):
     	return self._history
 
-    @affiliation.setter 
+    @history.setter 
     def history(self, value):
     	self._history = value
 
@@ -50,7 +50,32 @@ class player():
 # 2. Other rounds: Sorted players with history:
 #		
 
-# 		
+
+def pairing():
+	""""""
+    def pairing_round_one(players = players,
+                          byes = None):
+        """Pair players in first round of tournament
+
+        Input:  - list of players (w/ min: name, TELO)
+                - (Optional) players starting with bye
+        Output: - list of pairs (w/ min: Names, TELOs, Exp score)
+
+        Process:
+            0. Separate players known to have bye
+            1. Order remaining players on (TELO, name)
+            2. Integer divide N remaining players by 2, N//2
+            3. Divide players into 2 groups, (g1, g2) with:
+                g1 containing first N//2 players, and
+                g2 containing remaining players
+            4. If len(g1) != len(g2), g2[0] removed & given bye
+            5. pair g1[i] with g2[i] for i in N//2
+                if i%2 == 1, g1[i] is first element in pair (W),
+                if i%2 == 0, g1[i] is second element in pair (B)
+		"""
+        # Remove players with bye
+        if byes != None:
+            
 
 
 
